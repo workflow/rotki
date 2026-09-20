@@ -89,7 +89,7 @@ def create_session(
 
 def request_get(
         url: str,
-        timeout: int = GLOBAL_REQUESTS_TIMEOUT,
+        timeout: int | tuple[int, int] = GLOBAL_REQUESTS_TIMEOUT,
         handle_429: bool = False,
         backoff_in_seconds: float = 0,
 ) -> dict | list:
@@ -126,7 +126,7 @@ def request_get(
 
 def request_get_dict(
         url: str,
-        timeout: int = GLOBAL_REQUESTS_TIMEOUT,
+        timeout: int | tuple[int, int] = GLOBAL_REQUESTS_TIMEOUT,
         handle_429: bool = False,
         backoff_in_seconds: float = 0,
 ) -> dict:
